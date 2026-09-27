@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#111827" />
+  <title>VK Base — живая база возможностей ВКонтакте</title>
+  <meta name="description" content="Живая база функций ВКонтакте: API, Mini Apps, VK Bridge, сообщества, сообщения, реклама, контент и малоизвестные возможности." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">VK</div><div><strong>VK Base</strong><span>by iiai.pro</span></div></div>
+      <nav id="categoryNav" class="nav"></nav>
+      <div class="sidebar-footer">
+        <div class="legend"><span class="dot verified"></span> Подтверждено</div>
+        <div class="legend"><span class="dot rollout"></span> Rollout / частично</div>
+        <div class="legend"><span class="dot rare"></span> Редкое / малоизвестное</div>
+        <div class="legend"><span class="dot legacy"></span> Legacy / осторожно</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Меню">☰</button>
+        <div class="search-wrap">
+          <span class="search-icon">⌕</span>
+          <input id="searchInput" type="search" placeholder="Поиск: QR, callback, токен, реклама, история, геолокация…" autocomplete="off" />
+          <kbd>Ctrl K</kbd>
+        </div>
+        <button class="theme-btn" id="themeBtn" aria-label="Тема">◐</button>
+      </header>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Живая техническая база · обновляется ежедневно</div>
+          <h1>ВКонтакте: функции, API и возможности без маркетингового шума</h1>
+          <p>Что реально работает, где работает, какие есть ограничения и как применить на практике. От официальных функций до малоизвестных публичных возможностей, найденных в SDK, типах, changelog и репозиториях.</p>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="totalCount">0</strong><span>записей</span></div>
+          <div><strong id="verifiedCount">0</strong><span>проверено</span></div>
+          <div><strong id="rareCount">0</strong><span>редких</span></div>
+          <div><strong id="updatedDate">—</strong><span>последняя проверка</span></div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="chips" id="statusFilters"></div>
+        <select id="platformFilter" aria-label="Платформа">
+          <option value="all">Все платформы</option>
+          <option value="Web">Web</option>
+          <option value="iOS">iOS</option>
+          <option value="Android">Android</option>
+          <option value="API">API</option>
+          <option value="Admin">Кабинет / админка</option>
+        </select>
+      </section>
+
+      <section class="notice">
+        <strong>Уровень достоверности важнее громкости.</strong>
+        <span>«Редкое» не означает «секретное»: база включает только публично подтверждённые, наблюдаемые или воспроизводимые возможности. Закрытые внутренние API и обход ограничений сюда не попадают.</span>
+      </section>
+
+      <section id="resultsMeta" class="results-meta"></section>
+      <section id="cards" class="cards"></section>
+
+      <section class="changes">
+        <div class="section-head"><div><div class="eyebrow">Хронология</div><h2>Последние изменения</h2></div><button id="showAllChanges" class="ghost-btn">Показать всё</button></div>
+        <div id="changesList" class="timeline"></div>
+      </section>
+
+      <footer>
+        <span>VK Base — независимая база знаний. Не является официальным продуктом VK.</span>
+        <span>Источники сохраняются у каждой записи.</span>
+      </footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
