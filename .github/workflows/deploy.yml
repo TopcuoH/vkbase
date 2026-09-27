@@ -1,0 +1,46 @@
+name: Deploy VK Base
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: vkbase-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.VKBASE_SSH_KEY }}
+          SSH_HOST: ${{ secrets.VKBASE_SSH_HOST }}
+          SSH_USER: ${{ secrets.VKBASE_SSH_USER }}
+        run: |
+          test -n "$SSH_PRIVATE_KEY"
+          test -n "$SSH_HOST"
+          test -n "$SSH_USER"
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Deploy isolated static site
+        env:
+          SSH_HOST: ${{ secrets.VKBASE_SSH_HOST }}
+          SSH_USER: ${{ secrets.VKBASE_SSH_USER }}
+        run: |
+          rsync -az --delete             --exclude '.git'             --exclude '.github'             --exclude 'nginx-vkbase.conf'             ./ "$SSH_USER@$SSH_HOST:/srv/vkbase/current/"
+
+      - name: Verify deployment files
+        env:
+          SSH_HOST: ${{ secrets.VKBASE_SSH_HOST }}
+          SSH_USER: ${{ secrets.VKBASE_SSH_USER }}
+        run: |
+          ssh "$SSH_USER@$SSH_HOST"             "test -f /srv/vkbase/current/index.html && test -f /srv/vkbase/current/data/manifest.json"
