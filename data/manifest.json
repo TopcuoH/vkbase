@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "lastVerified": "27.09.2026",
+    "project": "VK Base"
+  },
+  "changes": [
+    {
+      "date": "27.09.2026",
+      "title": "VK Bridge 3.0 готовится с breaking changes",
+      "text": "В официальном README ветки core указаны ESM-only, TypeScript 4+ и отказ от enum в пользу строковых значений."
+    },
+    {
+      "date": "27.09.2026",
+      "title": "Проверка поддержки методов стала асинхронной",
+      "text": "bridge.supports помечен deprecated; актуальная проверка — supportsAsync, которая получает набор поддерживаемых обработчиков среды."
+    },
+    {
+      "date": "27.09.2026",
+      "title": "Desktop VK содержит расширенный набор Bridge-методов",
+      "text": "В исходниках перечислены методы для звонков, меню, community widget preview, рекламы, опросов, переводов и других сценариев."
+    },
+    {
+      "date": "27.09.2026",
+      "title": "Android: известна проблема VKWebAppCreateHash",
+      "text": "В открытых issues vk-bridge есть воспроизводимая жалоба на отсутствие ответа метода в мобильном приложении Android; используйте проверку поддержки и fallback."
+    }
+  ],
+  "parts": [
+    "features-1.json",
+    "features-2.json",
+    "features-3.json",
+    "features-4.json",
+    "features-5.json",
+    "features-6.json",
+    "features-7.json"
+  ]
+}
