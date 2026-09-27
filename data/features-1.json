@@ -1,0 +1,181 @@
+[
+  {
+    "name": "Инициализация Mini App",
+    "code": "VKWebAppInit",
+    "category": "VK Mini Apps / Bridge",
+    "status": "verified",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "summary": "Базовый handshake Mini App с клиентом VK.",
+    "details": "Сообщает контейнеру VK, что приложение готово взаимодействовать через Bridge. Обычно вызывается одним из первых методов.",
+    "use": "Старт Mini App, активация событий среды и дальнейших Bridge-вызовов.",
+    "limits": "Нужно учитывать различия Web/iOS/Android и проверять поддержку зависимых методов.",
+    "source": "https://github.com/VKCOM/vk-bridge/blob/master/packages/core/README.md",
+    "verified": "27.09.2026",
+    "priority": 1
+  },
+  {
+    "name": "Проверка поддержки метода",
+    "code": "bridge.supportsAsync(method)",
+    "category": "VK Mini Apps / Bridge",
+    "status": "rare",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "summary": "Позволяет до вызова узнать, поддерживается ли конкретный Bridge-метод в текущей среде.",
+    "details": "На Web кэширует список supportedHandlers, на native проверяет наличие обработчика. Старый bridge.supports помечен deprecated.",
+    "use": "Главный инструмент для безопасных fallback-сценариев и борьбы с различиями версий клиентов.",
+    "limits": "Нельзя считать наличие метода гарантией успешного бизнес-результата: разрешения пользователя и серверные ограничения остаются.",
+    "source": "https://github.com/VKCOM/vk-bridge/blob/master/packages/core/src/bridge.ts",
+    "verified": "27.09.2026",
+    "priority": 1
+  },
+  {
+    "name": "Получение пользователя",
+    "code": "VKWebAppGetUserInfo",
+    "category": "VK Mini Apps / Bridge",
+    "status": "verified",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "summary": "Возвращает основные данные текущего пользователя в контексте Mini App.",
+    "details": "Используется для персонализации интерфейса и первичной идентификации внутри клиентского приложения.",
+    "use": "Приветствие, аватар, локализация, предварительное заполнение профиля.",
+    "limits": "Не заменяет серверную проверку launch params и не даёт произвольный доступ к закрытым полям профиля.",
+    "source": "https://github.com/VKCOM/vk-mini-apps-api/blob/master/src/index.ts",
+    "verified": "27.09.2026",
+    "priority": 2
+  },
+  {
+    "name": "Получение email",
+    "code": "VKWebAppGetEmail",
+    "category": "VK Mini Apps / Bridge",
+    "status": "verified",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "summary": "Запрашивает email пользователя и подпись данных.",
+    "details": "Показывает системный сценарий получения email через VK-контейнер с возвращаемой подписью.",
+    "use": "Регистрация, заявки, привязка аккаунта, лид-форма внутри Mini App.",
+    "limits": "Требуется действие/согласие пользователя; подпись следует проверять на сервере.",
+    "source": "https://github.com/VKCOM/vk-mini-apps-api/blob/master/src/index.ts",
+    "verified": "27.09.2026",
+    "priority": 2
+  },
+  {
+    "name": "Получение телефона",
+    "code": "VKWebAppGetPhoneNumber",
+    "category": "VK Mini Apps / Bridge",
+    "status": "verified",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "summary": "Запрашивает подтверждённый телефон пользователя и подпись.",
+    "details": "Возвращает номер и sign, которую можно валидировать на серверной стороне.",
+    "use": "Лиды, регистрация, связь с клиентом без ручного ввода номера.",
+    "limits": "Требуется согласие пользователя; не храните и не используйте данные вне заявленной цели.",
+    "source": "https://github.com/VKCOM/vk-mini-apps-api/blob/master/src/index.ts",
+    "verified": "27.09.2026",
+    "priority": 2
+  },
+  {
+    "name": "Персональная карточка",
+    "code": "VKWebAppGetPersonalCard",
+    "category": "VK Mini Apps / Bridge",
+    "status": "rare",
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "summary": "Системно запрашивает телефон, email и/или адрес через специальную карточку.",
+    "details": "Может сократить форму ввода при оформлении заказа или заявки.",
+    "use": "Доставка, заказ, заявка, checkout.",
+    "limits": "В старой API-обёртке указаны минимальные версии iOS/Android; перед использованием проверяйте supportsAsync.",
+    "source": "https://github.com/VKCOM/vk-mini-apps-api/blob/master/src/index.ts",
+    "verified": "27.09.2026",
+    "priority": 3
+  },
+  {
+    "name": "Геопозиция пользователя",
+    "code": "VKWebAppGetGeodata",
+    "category": "VK Mini Apps / Bridge",
+    "status": "verified",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "summary": "Запрашивает текущую геопозицию в системном сценарии VK.",
+    "details": "Возвращает флаг доступности и координаты, если пользователь разрешил доступ.",
+    "use": "Ближайшие точки, локальные предложения, карта, доставка.",
+    "limits": "Требуется разрешение пользователя; точность зависит от устройства и среды.",
+    "source": "https://github.com/VKCOM/vk-mini-apps-api/blob/master/src/index.ts",
+    "verified": "27.09.2026",
+    "priority": 3
+  },
+  {
+    "name": "Сканер QR/штрихкодов",
+    "code": "VKWebAppOpenCodeReader",
+    "category": "Устройство и интерфейс",
+    "status": "rare",
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "summary": "Открывает системный сканер QR и штрихкодов из Mini App.",
+    "details": "Возвращает распознанные данные кода приложению.",
+    "use": "Авторизация на точке, акции, билеты, офлайн-мероприятия, товарные сценарии.",
+    "limits": "На Web может отсутствовать; обязательно проверяйте поддержку.",
+    "source": "https://github.com/VKCOM/vk-mini-apps-api/blob/master/src/index.ts",
+    "verified": "27.09.2026",
+    "priority": 3
+  },
+  {
+    "name": "Открытие другого Mini App",
+    "code": "VKWebAppOpenApp",
+    "category": "VK Mini Apps / Bridge",
+    "status": "verified",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "summary": "Открывает другое VK Mini App и может передать location/hash.",
+    "details": "Позволяет строить связки приложений и передавать внутренний маршрут.",
+    "use": "Партнёрские сценарии, экосистема нескольких приложений, переход в сервис-помощник.",
+    "limits": "Целевое приложение должно существовать и быть доступно пользователю.",
+    "source": "https://github.com/VKCOM/vk-mini-apps-api/blob/master/src/index.ts",
+    "verified": "27.09.2026",
+    "priority": 4
+  },
+  {
+    "name": "Токен пользователя VK API",
+    "code": "VKWebAppGetAuthToken",
+    "category": "Авторизация и VK ID",
+    "status": "verified",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android",
+      "API"
+    ],
+    "summary": "Запрашивает пользовательский access token с нужными scope.",
+    "details": "Возвращает токен и фактически выданные права; применяется для вызова методов VK API от лица пользователя.",
+    "use": "Доступ к разрешённым данным и действиям API.",
+    "limits": "Запрашивайте минимальные scope; доступность конкретных прав зависит от политики VK и типа приложения.",
+    "source": "https://github.com/VKCOM/vk-mini-apps-api/blob/master/src/index.ts",
+    "verified": "27.09.2026",
+    "priority": 2
+  }
+]
