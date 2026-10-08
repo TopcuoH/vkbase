@@ -50,5 +50,23 @@
     "source": "https://vk.company/ru/press/releases/12430/",
     "verified": "06.10.2026",
     "priority": 2
+  },
+  {
+    "name": "VKUI Gallery: новый вариант bullets=\"overlay\"",
+    "code": "Gallery bullets=\"overlay\"",
+    "category": "Устройство и интерфейс",
+    "status": "rare",
+    "platforms": [
+      "Web",
+      "React",
+      "VK Mini Apps"
+    ],
+    "summary": "В main-ветке VKUI для Gallery добавлен новый вариант индикатора слайдов bullets=\"overlay\": светлые точки отображаются на контрастной подложке.",
+    "details": "Официальный коммит VKCOM/VKUI от 06.10.2026 расширяет тип BaseGalleryProps: к значениям dark/light добавлено overlay. Для overlay в CarouselBase добавлена подложка color_overlay_primary и светлые индикаторы; документация Gallery обновлена с примерами.",
+    "use": "Использовать в каруселях и галереях Mini Apps/веб-интерфейсов, когда обычные светлые или тёмные точки плохо читаются поверх фото и другого неоднородного контента.",
+    "limits": "Подтверждено в официальной main-ветке VKUI, но на момент проверки отдельный стабильный релиз с этим изменением не подтверждён. До публикации новой версии npm не рассчитывайте на bullets=\"overlay\" в установленном стабильном пакете.",
+    "source": "https://github.com/VKCOM/VKUI/commit/deb1ab18ecee09901dc2c287822c613ab3cba191",
+    "verified": "07.10.2026",
+    "priority": 4
   }
 ]
