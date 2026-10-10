@@ -1,10 +1,15 @@
 {
   "meta": {
     "version": "1.0.0",
-    "lastVerified": "06.10.2026",
+    "lastVerified": "10.10.2026",
     "project": "VK Base"
   },
   "changes": [
+    {
+      "date": "06.10.2026",
+      "title": "VKUI Gallery: bullets=\"overlay\"",
+      "text": "В официальном VKCOM/VKUI (main) добавлен вариант индикаторов bullets=\"overlay\" для Gallery; он улучшает читаемость точек поверх фото. Доступен в исходниках, но ещё не включён в подтверждённый стабильный релиз npm; статус rare, Web/React/VK Mini Apps. Источник: https://github.com/VKCOM/VKUI/commit/deb1ab18ecee09901dc2c287822c613ab3cba191; проверено 10.10.2026."
+    },
     {
       "date": "05.10.2026",
       "title": "VK Реклама открыла продвижение в каналах MAX",
