@@ -1,4 +1,4 @@
-const S={all:'Все',verified:'Подтверждено',rollout:'Rollout',rare:'Редкое',legacy:'Legacy'};
+const S={all:'Все',verified:'Подтверждено',rollout:'Rollout',rare:'Редкое',legacy:'Legacy',technical:'Техническое'};
 let data={features:[],changes:[],meta:{}};let state={q:'',category:'all',status:'all',platform:'all'};
 const el=id=>document.getElementById(id);
 const norm=s=>(s||'').toLowerCase().replace(/ё/g,'е');
