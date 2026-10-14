@@ -8,7 +8,7 @@
     {
       "date": "13.10.2026",
       "title": "Технические обновления VKUI, VK Icons и VKJS",
-      "text": "В официальных репозиториях зафиксировано 17 технических коммитов: VKUI — 4 (обновления GitHub Actions и дедупликация yarn.lock), VK Icons — 6 (обновления source-map-js, @types/node, image-size, PostCSS, lint-staged и size-limit), VKJS — 7 (source-map-js, Biome, concurrently, Node.js .nvmrc, @types/node, SWC и size-limit). Статус всех записей technical: изменения относятся к CI/сборке/инструментам разработки, не подтверждают новые функции продукта, публичные API или новые стабильные релизы. Проверено 14.10.2026. Источники: https://github.com/VKCOM/VKUI/commits/master, https://github.com/VKCOM/icons/commits/master, https://github.com/VKCOM/vkjs/commits/master."
+      "text": "В официальных репозиториях зафиксировано 17 технических коммитов: VKUI — 4 (обновления GitHub Actions и дедупликация yarn.lock), VK Icons — 6 (обновления source-map-js, @types/node, image-size, PostCSS, lint-staged и size-limit), VKJS — 7 (source-map-js, Biome, concurrently, Node.js .nvmrc, @types/node, SWC и size-limit). Карточки добавлены в VK Base; действия download/upload-artifact также сведены в одну сводную запись. Статус записей technical: изменения относятся к CI/сборке/инструментам разработки, не подтверждают новые функции продукта, публичные API или новые стабильные релизы. Проверено 14.10.2026. Источники: https://github.com/VKCOM/VKUI/commits/master, https://github.com/VKCOM/icons/commits/master, https://github.com/VKCOM/vkjs/commits/master."
     },
     {
       "date": "06.10.2026",
@@ -67,6 +67,7 @@
     "features-8.json",
     "features-9.json",
     "features-10.json",
-    "features-11.json"
+    "features-11.json",
+    "features-12.json"
   ]
 }
