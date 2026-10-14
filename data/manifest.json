@@ -7,6 +7,11 @@
   "changes": [
     {
       "date": "13.10.2026",
+      "title": "VKUI выпустил стабильную версию 8.4.2",
+      "text": "Подтверждён релиз VKUI v8.4.2 от 13.10.2026. В release notes: документация возвращает Markdown при запросах через curl; исправлена типографика Banner.extraSubtitle; сокращены пересчёты видимости стрелок HorizontalScroll; исправлено удержание старых DOM refs у некоторых компонентов. Релиз доступен как стабильный пакет; разработчикам React/VK Mini Apps стоит обновить @vkontakte/vkui до 8.4.2 и проверить затронутые компоненты. Источник: https://github.com/VKCOM/VKUI/releases/tag/v8.4.2. Проверено 14.10.2026."
+    },
+    {
+      "date": "13.10.2026",
       "title": "Технические обновления VKUI, VK Icons и VKJS",
       "text": "В официальных репозиториях зафиксировано 17 технических коммитов: VKUI — 4 (обновления GitHub Actions и дедупликация yarn.lock), VK Icons — 6 (обновления source-map-js, @types/node, image-size, PostCSS, lint-staged и size-limit), VKJS — 7 (source-map-js, Biome, concurrently, Node.js .nvmrc, @types/node, SWC и size-limit). Карточки добавлены в VK Base; действия download/upload-artifact также сведены в одну сводную запись. Статус записей technical: изменения относятся к CI/сборке/инструментам разработки, не подтверждают новые функции продукта, публичные API или новые стабильные релизы. Проверено 14.10.2026. Источники: https://github.com/VKCOM/VKUI/commits/master, https://github.com/VKCOM/icons/commits/master, https://github.com/VKCOM/vkjs/commits/master."
     },
@@ -68,6 +73,7 @@
     "features-9.json",
     "features-10.json",
     "features-11.json",
-    "features-12.json"
+    "features-12.json",
+    "features-13.json"
   ]
 }
