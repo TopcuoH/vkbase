@@ -1,0 +1,16 @@
+[
+  {
+    "name": "VKUI: обновление actions/setup-node до 7.1.0",
+    "code": "GitHub Actions / actions/setup-node 7.1.0",
+    "category": "VKUI / CI и зависимости",
+    "status": "technical",
+    "platforms": ["GitHub Actions", "VKUI development"],
+    "summary": "В workflow VKUI обновлено действие GitHub Actions для установки Node.js с 7.0.0 до 7.1.0.",
+    "details": "Коммит меняет зависимость CI, используемую в автоматизированных workflow репозитория. Публичные компоненты VKUI, Bridge-методы и интерфейсы приложения этим коммитом не меняются.",
+    "use": "Полезно при анализе воспроизводимости сборок и CI VKUI.",
+    "limits": "Это изменение инфраструктуры разработки, а не обновление опубликованного npm-пакета. Проверено по исходному коммиту от 13.10.2026.",
+    "source": "https://github.com/VKCOM/VKUI/commit/6038e5bf745f2a42369999574320850b1603c279",
+    "verified": "14.10.2026",
+    "priority": 9
+  }
+]
