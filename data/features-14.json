@@ -1,0 +1,30 @@
+[
+  {
+    "name": "VKUI: обновлена транзитивная dev-зависимость shell-quote",
+    "code": "VKUI / concurrently / shell-quote",
+    "category": "VKUI / CI и зависимости",
+    "status": "technical",
+    "platforms": ["GitHub Actions", "VKUI development"],
+    "summary": "14.10.2026 в официальном VKUI обновлена зависимость shell-quote с 1.9.0 до 1.12.0 через обновление concurrently с 10.0.5 до 10.0.6.",
+    "details": "Изменение затрагивает yarn.lock и цепочку инструментов разработки; shell-quote является зависимостью concurrently. Коммит не меняет runtime-компоненты VKUI и не является самостоятельным релизом библиотеки.",
+    "use": "Учитывать при воспроизведении окружения разработки VKUI и диагностике CI/build. После обновления lockfile использовать согласованную версию зависимостей.",
+    "limits": "Это транзитивная dev-зависимость. По этому коммиту нельзя заключать, что изменилось поведение пользовательских приложений или публичный API.",
+    "source": "https://github.com/VKCOM/VKUI/commit/1b05653d19034bb981dfcff393ae40dfe0d282a4",
+    "verified": "15.10.2026",
+    "priority": 8
+  },
+  {
+    "name": "VKJS: скрипт очистки сборки переведён на встроенный Node.js API",
+    "code": "VKJS / build script / dependency cleanup",
+    "category": "VKJS / сборка и зависимости",
+    "status": "technical",
+    "platforms": ["Node.js", "VKJS development"],
+    "summary": "14.10.2026 в VKCOM/vkjs скрипт clear заменён на вызов node:fs.rmSync; зависимость shx удалена.",
+    "details": "В том же коммите обновлён lockfile: в частности, версия ajv сведена к 8.20.0, обновлены данные browserslist и brace-expansion и другие транзитивные зависимости. Это изменение инструментов сборки и дерева зависимостей, не новая функция VK API или VK Bridge.",
+    "use": "Для разработки из исходников VKJS очистка каталога lib использует штатный Node.js API; после обновления рабочей копии переустановите зависимости и прогоните build/test.",
+    "limits": "Изменение относится к внутреннему скрипту сборки и dev-зависимостям. Не означает изменения публичного поведения опубликованного пакета без отдельного релиза.",
+    "source": "https://github.com/VKCOM/vkjs/commit/0e93c356bf0bf356955ce5d609c2b085728cb428",
+    "verified": "15.10.2026",
+    "priority": 8
+  }
+]
