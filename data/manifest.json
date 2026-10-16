@@ -7,6 +7,11 @@
   "changes": [
     {
       "date": "15.10.2026",
+      "title": "VKUI Tokens 4.94.0 source: тема Lego и сборочные зависимости",
+      "text": "В main vkui-tokens изменены шрифты темы Lego, strokeImageBorderAlpha и добавлен componentsSubnavigationBarSelectedBackground; package.json повышен до 4.94.0. Обновлены devDependencies SWC, @types/lodash и @vkontakte/icons. Применение: визуально проверить типографику/обводки и пересобрать темы. Ограничение: npm на 16.10 показывает 4.93.0; 4.94.0 пока не подтверждена как опубликованная. Источники: https://github.com/VKCOM/vkui-tokens/commit/c18e9c0f7c0112cef69deb30acbf1e0b99db920a ; https://github.com/VKCOM/vkui-tokens/commit/1a6a7576b9810f384138b70aa5deed20f7f0e2e2. Проверено 16.10.2026."
+    },
+    {
+      "date": "15.10.2026",
       "title": "VK Icons: в main обновлены иконки Market и подготовлена версия 3.77.0",
       "text": "В официальном VKCOM/icons обновлён market_outline_24.svg, добавлен market_slash_outline_24.svg, а package.json в main повышен до 3.77.0. Практическое применение: новый визуальный статус отключённого/недоступного маркета после публикации пакета. Ограничение: npm-профиль VKCOM на момент проверки всё ещё показывает опубликованную 3.76.0; 3.77.0 подтверждена в исходниках, публикация npm не подтверждена. Источник: https://github.com/VKCOM/icons/commit/60f3fd36f1e7cb3af061956a9cd780ef1ec093d8; проверено 16.10.2026."
     },
