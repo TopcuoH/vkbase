@@ -1,10 +1,20 @@
 {
   "meta": {
     "version": "1.0.0",
-    "lastVerified": "14.10.2026",
+    "lastVerified": "16.10.2026",
     "project": "VK Base"
   },
   "changes": [
+    {
+      "date": "15.10.2026",
+      "title": "VK Icons: в main обновлены иконки Market и подготовлена версия 3.77.0",
+      "text": "В официальном VKCOM/icons обновлён market_outline_24.svg, добавлен market_slash_outline_24.svg, а package.json в main повышен до 3.77.0. Практическое применение: новый визуальный статус отключённого/недоступного маркета после публикации пакета. Ограничение: npm-профиль VKCOM на момент проверки всё ещё показывает опубликованную 3.76.0; 3.77.0 подтверждена в исходниках, публикация npm не подтверждена. Источник: https://github.com/VKCOM/icons/commit/60f3fd36f1e7cb3af061956a9cd780ef1ec093d8; проверено 16.10.2026."
+    },
+    {
+      "date": "15.10.2026",
+      "title": "VKUI main: layoutMode и отказ от глобальных vkuiInternal*",
+      "text": "В main-ветке VKUI добавлено AppRoot.layoutMode при пометке layout как deprecated; примеры/тесты Group переводятся с mode на layoutMode. Отдельный коммит переводит межкомпонентные стили с глобальных vkuiInternal*-селекторов на CSS Modules из *.global.module.css. Практическое применение: подготовить миграцию свойств оформления и не использовать внутренние глобальные классы в пользовательских стилях. Ограничение: это изменения исходников main; они не подтверждены в стабильном npm-релизе VKUI на 16.10.2026. Источники: https://github.com/VKCOM/VKUI/commit/5c005d5a2f91cae0f79c06ab1eb912ac1ee23eda и https://github.com/VKCOM/VKUI/commit/0349b1c8e1aacb1a23e9d6fa1fee6a78abc4e02e; проверено 16.10.2026."
+    },
     {
       "date": "13.10.2026",
       "title": "VKUI выпустил стабильную версию 8.4.2",
@@ -74,6 +84,7 @@
     "features-10.json",
     "features-11.json",
     "features-12.json",
-    "features-13.json"
+    "features-13.json",
+    "features-14.json"
   ]
 }
