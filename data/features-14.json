@@ -1,1 +1,93 @@
-[{"name":"VKUI: layoutMode вместо layout/mode","code":"AppRoot.layoutMode; Group.layoutMode","category":"VKUI / API компонентов","status":"rare","platforms":["Web","React","VK Mini Apps"],"summary":"В main-ветке добавлен AppRoot.layoutMode; прежний AppRoot.layout помечен deprecated. Примеры и тесты Group также переводятся с mode на layoutMode.","details":"Коммит от 15.10.2026 вычисляет resolvedLayoutMode = layoutMode ?? layout для AppRoot. Изменение находится в исходниках main, не в подтверждённом стабильном релизе.","use":"При следующем обновлении VKUI проверить типы и перейти на layoutMode после выхода изменения в стабильном пакете; проверить card/plain на разных ширинах.","limits":"На 16.10.2026 стабильный npm-релиз — 8.4.2, опубликованный до этих коммитов. Для Group сверить финальные типы в релизе.","source":"https://github.com/VKCOM/VKUI/commit/5c005d5a2f91cae0f79c06ab1eb912ac1ee23eda","verified":"16.10.2026","priority":4},{"name":"VKUI: отказ от глобальных CSS-классов vkuiInternal*","code":"CSS Modules / *.global.module.css","category":"VKUI / стили и совместимость","status":"technical","platforms":["Web","React","VK Mini Apps"],"summary":"VKUI заменяет часть глобальных vkuiInternal*-классов локальными CSS Modules-классами и рекомендует не добавлять новые глобальные внутренние селекторы.","details":"Коммит обновляет документацию и переносит межкомпонентные стили на классы из *.global.module.css. Это изменение main, отдельный стабильный релиз не подтверждён.","use":"Не строить пользовательские оверрайды на внутренних .vkuiInternal*; использовать публичные props и собственные CSS Modules.","limits":"Внутренние классы не являются стабильным публичным API; существующие оверрайды могут ломаться при обновлениях. Проверено 16.10.2026.","source":"https://github.com/VKCOM/VKUI/commit/0349b1c8e1aacb1a23e9d6fa1fee6a78abc4e02e","verified":"16.10.2026","priority":5},{"name":"VK Icons: Market и MarketSlash в исходниках 3.77.0","code":"Icon24MarketOutline; Icon24MarketSlashOutline; @vkontakte/icons 3.77.0","category":"VK Icons / набор иконок","status":"rare","platforms":["Web","React","VK Mini Apps"],"summary":"15.10.2026 изменён SVG market_outline_24.svg и добавлен market_slash_outline_24.svg; версия в package.json main повышена до 3.77.0.","details":"После сборки и публикации это соответствует обновлённой иконке Market и новому варианту MarketSlash для обозначения отключённого/недоступного маркета.","use":"После выхода npm 3.77.0 применять MarketSlash для состояния недоступности торгового раздела.","limits":"На момент проверки npm-профиль VKCOM показывает 3.76.0 как последнюю опубликованную версию. 3.77.0 подтверждена только в исходниках; импорт новых компонентов из npm пока не гарантирован.","source":"https://github.com/VKCOM/icons/commit/60f3fd36f1e7cb3af061956a9cd780ef1ec093d8","verified":"16.10.2026","priority":4}]
+[
+  {
+    "name": "VKUI: layoutMode вместо layout/mode",
+    "code": "AppRoot.layoutMode; Group.layoutMode",
+    "category": "VKUI / API компонентов",
+    "status": "rare",
+    "platforms": [
+      "Web",
+      "React",
+      "VK Mini Apps"
+    ],
+    "summary": "В main-ветке добавлен AppRoot.layoutMode; прежний AppRoot.layout помечен deprecated. Примеры и тесты Group также переводятся с mode на layoutMode.",
+    "details": "Коммит от 15.10.2026 вычисляет resolvedLayoutMode = layoutMode ?? layout для AppRoot. Изменение находится в исходниках main, не в подтверждённом стабильном релизе.",
+    "use": "При следующем обновлении VKUI проверить типы и перейти на layoutMode после выхода изменения в стабильном пакете; проверить card/plain на разных ширинах.",
+    "limits": "На 16.10.2026 стабильный npm-релиз — 8.4.2, опубликованный до этих коммитов. Для Group сверить финальные типы в релизе.",
+    "source": "https://github.com/VKCOM/VKUI/commit/5c005d5a2f91cae0f79c06ab1eb912ac1ee23eda",
+    "verified": "16.10.2026",
+    "priority": 4
+  },
+  {
+    "name": "VKUI: отказ от глобальных CSS-классов vkuiInternal*",
+    "code": "CSS Modules / *.global.module.css",
+    "category": "VKUI / стили и совместимость",
+    "status": "technical",
+    "platforms": [
+      "Web",
+      "React",
+      "VK Mini Apps"
+    ],
+    "summary": "VKUI заменяет часть глобальных vkuiInternal*-классов локальными CSS Modules-классами и рекомендует не добавлять новые глобальные внутренние селекторы.",
+    "details": "Коммит обновляет документацию и переносит межкомпонентные стили на классы из *.global.module.css. Это изменение main, отдельный стабильный релиз не подтверждён.",
+    "use": "Не строить пользовательские оверрайды на внутренних .vkuiInternal*; использовать публичные props и собственные CSS Modules.",
+    "limits": "Внутренние классы не являются стабильным публичным API; существующие оверрайды могут ломаться при обновлениях. Проверено 16.10.2026.",
+    "source": "https://github.com/VKCOM/VKUI/commit/0349b1c8e1aacb1a23e9d6fa1fee6a78abc4e02e",
+    "verified": "16.10.2026",
+    "priority": 5
+  },
+  {
+    "name": "VK Icons: Market и MarketSlash в исходниках 3.77.0",
+    "code": "Icon24MarketOutline; Icon24MarketSlashOutline; @vkontakte/icons 3.77.0",
+    "category": "VK Icons / набор иконок",
+    "status": "rare",
+    "platforms": [
+      "Web",
+      "React",
+      "VK Mini Apps"
+    ],
+    "summary": "15.10.2026 изменён SVG market_outline_24.svg и добавлен market_slash_outline_24.svg; версия в package.json main повышена до 3.77.0.",
+    "details": "После сборки и публикации это соответствует обновлённой иконке Market и новому варианту MarketSlash для обозначения отключённого/недоступного маркета.",
+    "use": "После выхода npm 3.77.0 применять MarketSlash для состояния недоступности торгового раздела.",
+    "limits": "На момент проверки npm-профиль VKCOM показывает 3.76.0 как последнюю опубликованную версию. 3.77.0 подтверждена только в исходниках; импорт новых компонентов из npm пока не гарантирован.",
+    "source": "https://github.com/VKCOM/icons/commit/60f3fd36f1e7cb3af061956a9cd780ef1ec093d8",
+    "verified": "16.10.2026",
+    "priority": 4
+  },
+  {
+    "name": "VKUI Tokens: обновлены шрифты и цвета темы Lego",
+    "code": "@vkontakte/vkui-tokens 4.94.0 source / Lego theme",
+    "category": "VKUI / дизайн-токены",
+    "status": "rare",
+    "platforms": [
+      "Web",
+      "React",
+      "VK Mini Apps",
+      "Design system"
+    ],
+    "summary": "В main-ветке vkui-tokens обновлены типографические параметры темы Lego, прозрачность обводки изображения, добавлен componentsSubnavigationBarSelectedBackground и скорректированы/переименованы отдельные font-токены.",
+    "details": "Коммит меняет параметры fontTitle1, fontBody и fontParagraph, добавляет fontCaption2, корректирует fontVariationSettings и line-height, меняет strokeImageBorderAlpha для light/dark с более плотных значений на #3333330f/#ffffff0f и добавляет цвет selected background для subnavigation bar. Отдельный коммит повышает package.json до 4.94.0.",
+    "use": "При тестировании обновлённой темы Lego проверять заголовки, основной текст, мелкие подписи, обводки изображений и выбранное состояние поднавигации; если собственные темы наследуют Lego, проверить визуальные регрессии.",
+    "limits": "На 16.10.2026 npm показывает @vkontakte/vkui-tokens 4.93.0, а 4.94.0 подтверждена в main и ещё не подтверждена как опубликованный пакет. Не переносить новые токены в production, пока не опубликован релиз и не проверен итоговый changelog.",
+    "source": "https://github.com/VKCOM/vkui-tokens/commit/c18e9c0f7c0112cef69deb30acbf1e0b99db920a",
+    "verified": "16.10.2026",
+    "priority": 3
+  },
+  {
+    "name": "VKUI Tokens: технические обновления сборочных зависимостей",
+    "code": "@swc/plugin-transform-imports 15.0.0→17.0.0; @types/lodash 4.17.25→4.17.26; @vkontakte/icons 3.74.0→3.75.0; @swc/core 1.16.13→1.16.18",
+    "category": "VKUI / CI и зависимости",
+    "status": "technical",
+    "platforms": [
+      "Build",
+      "TypeScript",
+      "Developer tooling"
+    ],
+    "summary": "15.10.2026 в vkui-tokens обновлены четыре dev-зависимости и соответствующие записи yarn.lock; также main package.json повышен с 4.93.0 до 4.94.0.",
+    "details": "Обновления затрагивают SWC core, плагин transform-imports, типы Lodash и используемую в инструментах разработки версию @vkontakte/icons. Источники: https://github.com/VKCOM/vkui-tokens/commit/257390740568ce68251bd083fc1fb8253f994841 ; https://github.com/VKCOM/vkui-tokens/commit/aebaceb27a5e0c20adaaba8aa0c3768eba8a45cb ; https://github.com/VKCOM/vkui-tokens/commit/69049ca3f2a28c13bdabec4e98c159f37c085dc4 ; https://github.com/VKCOM/vkui-tokens/commit/06b87abfb1896b9b5d8140202a786408502fada7 ; https://github.com/VKCOM/vkui-tokens/commit/1a6a7576b9810f384138b70aa5deed20f7f0e2e2.",
+    "use": "Учитывать при воспроизведении сборки токенов, обновлении lock-файла и диагностике несовместимостей SWC; после установки прогнать тесты сборки тем.",
+    "limits": "Это devDependencies и исходники main, а не отдельные пользовательские возможности VK. Публикация vkui-tokens 4.94.0 в npm на момент проверки не подтверждена; major-переход SWC plugin особенно требует проверки сборочных сценариев.",
+    "source": "https://github.com/VKCOM/vkui-tokens/commit/1a6a7576b9810f384138b70aa5deed20f7f0e2e2",
+    "verified": "16.10.2026",
+    "priority": 8
+  }
+]
