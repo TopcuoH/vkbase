@@ -1,0 +1,30 @@
+[
+  {
+    "name": "VK Icons 3.78.0: Icon24MarketSlashOutline",
+    "code": "Icon24MarketSlashOutline; Icon24MarketOutline; @vkontakte/icons 3.78.0",
+    "category": "VK Icons / набор иконок",
+    "status": "verified",
+    "platforms": ["Web", "React", "VK Mini Apps"],
+    "summary": "16.10.2026 опубликован релиз @vkontakte/icons 3.78.0: добавлена Icon24MarketSlashOutline и изменена Icon24MarketOutline.",
+    "details": "Официальные release notes указывают новую иконку MarketSlash и обновлённую MarketOutline. Релизный тег @vkontakte/icons@3.78.0 опубликован 16.10.2026 в 08:31 UTC. Это обновление библиотеки интерфейсных SVG-иконок, а не самостоятельная функция социальной сети.",
+    "use": "После обновления пакета можно использовать Icon24MarketSlashOutline для обозначения недоступного/отключённого маркета и Icon24MarketOutline для обычного состояния.",
+    "limits": "Доступность в проекте зависит от установленной версии @vkontakte/icons. Проверьте визуальную семантику и доступность подписи: иконка сама по себе не объясняет пользователю причину недоступности.",
+    "source": "https://github.com/VKCOM/icons/releases/tag/%40vkontakte/icons%403.78.0",
+    "verified": "17.10.2026",
+    "priority": 4
+  },
+  {
+    "name": "VKUI: добавлен запуск E2E-тестов в workflow покрытия",
+    "code": "GitHub Actions; branch_test_coverage.yml; reusable_workflow_test_e2e.yml",
+    "category": "VKUI / CI и качество",
+    "status": "technical",
+    "platforms": ["Developer tooling", "CI"],
+    "summary": "16.10.2026 workflow покрытия ветки VKUI дополнен отдельным job test_e2e, вызывающим переиспользуемый workflow E2E-тестов.",
+    "details": "Официальный коммит добавляет job «Call reusable e2e tests workflow» в .github/workflows/branch_test_coverage.yml с permissions contents: read, id-token: write и code-quality: write. Это меняет проверочную инфраструктуру репозитория, а не runtime-компоненты VKUI.",
+    "use": "При анализе CI VKUI учитывать, что в workflow покрытия теперь вызываются end-to-end тесты; при форке или переносе workflow проверить наличие reusable_workflow_test_e2e.yml и требуемых permissions.",
+    "limits": "Не является изменением публичного API или пользовательского интерфейса. Сам коммит подтверждает подключение job, но успешность конкретного запуска E2E должна проверяться по соответствующему workflow run.",
+    "source": "https://github.com/VKCOM/VKUI/commit/021a683ae2cd9bd5dfd3c36a766388e32c538acf",
+    "verified": "17.10.2026",
+    "priority": 8
+  }
+]
