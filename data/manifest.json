@@ -1,10 +1,20 @@
 {
   "meta": {
     "version": "1.0.0",
-    "lastVerified": "16.10.2026",
+    "lastVerified": "17.10.2026",
     "project": "VK Base"
   },
   "changes": [
+    {
+      "date": "16.10.2026",
+      "title": "VK Icons 3.78.0 опубликован: MarketSlash и обновлённая MarketOutline",
+      "text": "Официальный релиз @vkontakte/icons@3.78.0 опубликован 16.10.2026 в 08:31 UTC. Добавлена Icon24MarketSlashOutline и изменена Icon24MarketOutline. Применение: обозначать недоступность маркета в React/Web/VK Mini Apps после обновления пакета. Ограничение: это библиотечные иконки, а не функция самой платформы; необходимо обновить @vkontakte/icons и проверить визуальный контекст. Источник: https://github.com/VKCOM/icons/releases/tag/%40vkontakte/icons%403.78.0. Проверено 17.10.2026."
+    },
+    {
+      "date": "16.10.2026",
+      "title": "VKUI: подключён E2E workflow к проверке покрытия ветки",
+      "text": "В .github/workflows/branch_test_coverage.yml добавлен job test_e2e, вызывающий reusable_workflow_test_e2e.yml; job получает contents:read, id-token:write и code-quality:write. Это техническое изменение CI, не изменение runtime-компонентов или публичного API. Применение: учитывать E2E job при диагностике и воспроизведении CI VKUI. Ограничение: коммит подтверждает подключение job, но результат конкретного тестового запуска нужно смотреть в workflow runs. Источник: https://github.com/VKCOM/VKUI/commit/021a683ae2cd9bd5dfd3c36a766388e32c538acf. Проверено 17.10.2026."
+    },
     {
       "date": "15.10.2026",
       "title": "VKUI Tokens 4.94.0 source: тема Lego и сборочные зависимости",
@@ -90,6 +100,7 @@
     "features-11.json",
     "features-12.json",
     "features-13.json",
-    "features-14.json"
+    "features-14.json",
+    "features-15.json"
   ]
 }
