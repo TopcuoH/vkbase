@@ -1,10 +1,20 @@
 {
   "meta": {
     "version": "1.0.0",
-    "lastVerified": "17.10.2026",
+    "lastVerified": "19.10.2026",
     "project": "VK Base"
   },
   "changes": [
+    {
+      "date": "18.10.2026",
+      "title": "VK: инцидент в ЦОД, сервисы доступны штатно",
+      "text": "18.10.2026 VK опубликовала информационное сообщение о происшествии в ЦОД в Ленинградской области и указала, что сервисы доступны пользователям в обычном режиме. Зафиксировано как операционное событие, а не как изменение функций или API. Источник: https://vk.company.ru/ru/press/releases/12438/. Проверено 19.10.2026."
+    },
+    {
+      "date": "18.10.2026",
+      "title": "VKUI: 16 технических обновлений зависимостей в main",
+      "text": "18.10.2026 в официальном VKCOM/VKUI обнаружено 16 коммитов обновления зависимостей тестирования, документации и сборки. Зафиксированы обновления Vitest 5.0.3→5.0.4, Playwright Test 1.64.0→1.64.1, stylelint-order 8.1.1→8.1.2, @testing-library/user-event 14.6.7→14.6.8, @swc/core 1.16.13→1.16.18, dotenv 18.0.6→18.0.8, Storybook 10.6.1→10.6.2 и @storybook/icons 2.1.0→2.2.0, ESLint group, Rspack 2.2.8→2.2.9, Next.js 16.4.0→16.4.1, Vite 8.3.3→8.3.4, happy-dom 20.14.5→21.0.1, @types/node 26.6.4→26.6.5, cssnano 9.3.2→9.8.0, @vkontakte/icons 3.75.0→3.76.0 и Zod 4.6.5→4.6.7. Все изменения относятся к developer tooling/CI. Подробные карточки с отдельными источниками добавлены в data/features-16.json. Источник: https://github.com/VKCOM/VKUI/commits/master. Проверено 19.10.2026."
+    },
     {
       "date": "16.10.2026",
       "title": "VK Icons 3.78.0 опубликован: MarketSlash и обновлённая MarketOutline",
@@ -101,6 +111,7 @@
     "features-12.json",
     "features-13.json",
     "features-14.json",
-    "features-15.json"
+    "features-15.json",
+    "features-16.json"
   ]
 }
