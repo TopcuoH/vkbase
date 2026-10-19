@@ -1,0 +1,290 @@
+[
+  {
+    "name": "VKUI: обновлена группа Vitest",
+    "code": "vitest; @vitest/coverage-v8 5.0.3→5.0.4; @vitest/utils 5.0.3→5.0.4",
+    "category": "VKUI / тестирование",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "CI"
+    ],
+    "summary": "18.10.2026 в VKCOM/VKUI обновлена группа Vitest: vitest, @vitest/coverage-v8 и @vitest/utils с 5.0.3 до 5.0.4.",
+    "details": "Коммит обновляет три dev-зависимости тестового стека в репозитории VKUI. Изменение подтверждено в истории официального репозитория; отдельный новый релиз VKUI этим коммитом не объявлен.",
+    "use": "При локальном запуске тестов VKUI использовать обновлённый lockfile и учитывать новую patch-версию Vitest.",
+    "limits": "Это изменение инструментов разработки, не пользовательская функция и не изменение VK API. Совместимость сторонних форков следует проверять собственными тестами.",
+    "source": "https://github.com/VKCOM/VKUI/commit/85b2691ec179637e94821720990aa4f385a92858",
+    "verified": "19.10.2026",
+    "priority": 8
+  },
+  {
+    "name": "VKUI: обновлён Playwright Test",
+    "code": "@playwright/test 1.64.0→1.64.1",
+    "category": "VKUI / E2E-тестирование",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "CI"
+    ],
+    "summary": "18.10.2026 @playwright/test обновлён с 1.64.0 до 1.64.1.",
+    "details": "Официальный commit обновляет прямую dev-зависимость Playwright Test в VKUI на patch-релиз.",
+    "use": "При воспроизведении E2E-тестов VKUI установить зависимости по актуальному lockfile; после обновления прогнать собственный набор браузерных тестов.",
+    "limits": "Не подтверждает изменение runtime-компонентов VKUI или поведения приложений ВКонтакте.",
+    "source": "https://github.com/VKCOM/VKUI/commit/b939b86e5a2e4a838bc8b5d88aef62f15341e6af",
+    "verified": "19.10.2026",
+    "priority": 8
+  },
+  {
+    "name": "VKUI: обновлён stylelint-order",
+    "code": "stylelint-order 8.1.1→8.1.2",
+    "category": "VKUI / линтинг CSS",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "CI"
+    ],
+    "summary": "18.10.2026 stylelint-order обновлён с 8.1.1 до 8.1.2.",
+    "details": "Patch-обновление инструмента, контролирующего порядок CSS-деклараций в проекте VKUI.",
+    "use": "При локальном запуске Stylelint использовать версию из обновлённого lockfile.",
+    "limits": "Это изменение проверки исходников; само по себе не меняет CSS или поведение опубликованного пакета.",
+    "source": "https://github.com/VKCOM/VKUI/commit/354a535cf5e22170bf079d45a8d055e95b41983e",
+    "verified": "19.10.2026",
+    "priority": 9
+  },
+  {
+    "name": "VKUI: обновлён Testing Library user-event",
+    "code": "@testing-library/user-event 14.6.7→14.6.8",
+    "category": "VKUI / тестирование компонентов",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "CI"
+    ],
+    "summary": "18.10.2026 @testing-library/user-event обновлён с 14.6.7 до 14.6.8.",
+    "details": "Patch-обновление инструмента симуляции пользовательских действий в тестах компонентов VKUI.",
+    "use": "При отладке тестов взаимодействия обновить зависимости и повторить тесты ввода, кликов и клавиатурных действий.",
+    "limits": "Не является исправлением конкретного пользовательского бага VKUI; commit сообщает только об обновлении зависимости.",
+    "source": "https://github.com/VKCOM/VKUI/commit/87f9387a1a205eb847a8656f5d29912cb125c8de",
+    "verified": "19.10.2026",
+    "priority": 8
+  },
+  {
+    "name": "VKUI: обновлён SWC Core",
+    "code": "@swc/core 1.16.13→1.16.18",
+    "category": "VKUI / сборка",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "CI"
+    ],
+    "summary": "18.10.2026 @swc/core обновлён с 1.16.13 до 1.16.18.",
+    "details": "Patch-обновление компилятора SWC, используемого в инструментах разработки VKUI.",
+    "use": "При сборке исходников VKUI использовать актуальную версию из lockfile и прогнать build/typecheck.",
+    "limits": "Не означает автоматического изменения опубликованной версии VKUI или публичного API.",
+    "source": "https://github.com/VKCOM/VKUI/commit/e613aedf25918dd9e1949154ef7ecd912d390a11",
+    "verified": "19.10.2026",
+    "priority": 8
+  },
+  {
+    "name": "VKUI: обновлён dotenv",
+    "code": "dotenv 18.0.6→18.0.8",
+    "category": "VKUI / конфигурация разработки",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "CI"
+    ],
+    "summary": "18.10.2026 dotenv обновлён с 18.0.6 до 18.0.8.",
+    "details": "Patch-обновление dev-зависимости для загрузки переменных окружения в инструментах VKUI.",
+    "use": "При локальном воспроизведении сборки синхронизировать зависимости с lockfile.",
+    "limits": "Нет подтверждений изменения конфигурации пользовательских приложений; обновление относится к окружению разработки.",
+    "source": "https://github.com/VKCOM/VKUI/commit/e3ee9101acebff1904556b88a84891cf0741d84e",
+    "verified": "19.10.2026",
+    "priority": 9
+  },
+  {
+    "name": "VKUI: обновлена группа Storybook",
+    "code": "Storybook 10.6.1→10.6.2; @storybook/icons 2.1.0→2.2.0",
+    "category": "VKUI / документация компонентов",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "Component documentation"
+    ],
+    "summary": "18.10.2026 обновлена группа из семи зависимостей Storybook в репозитории VKUI.",
+    "details": "Обновлены @storybook/addon-a11y, addon-docs, addon-links, @storybook/react-vite, storybook и @storybook/react с 10.6.1 до 10.6.2; @storybook/icons обновлён с 2.1.0 до 2.2.0.",
+    "use": "При запуске и сборке Storybook VKUI использовать актуальные зависимости; проверить генерацию документации, доступность аддонов и работу интерактивных примеров.",
+    "limits": "Это инфраструктура документации и разработки. Не подтверждает новый стабильный релиз VKUI.",
+    "source": "https://github.com/VKCOM/VKUI/commit/39d33e7525a5b2d5f4bc927e08d3855e83fba385",
+    "verified": "19.10.2026",
+    "priority": 7
+  },
+  {
+    "name": "VKUI: обновлена группа ESLint",
+    "code": "@typescript-eslint/eslint-plugin/parser 8.71.1→8.71.2; eslint-plugin-jsdoc 65.2.1→65.3.4; eslint-plugin-unicorn 77.0.0→78.0.0",
+    "category": "VKUI / статический анализ",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "CI"
+    ],
+    "summary": "18.10.2026 обновлены четыре зависимости группы ESLint, включая major-обновление eslint-plugin-unicorn до 78.0.0.",
+    "details": "@typescript-eslint/eslint-plugin и parser обновлены до 8.71.2; eslint-plugin-jsdoc до 65.3.4; eslint-plugin-unicorn с 77.0.0 до 78.0.0.",
+    "use": "При запуске lint в форках VKUI проверить конфигурацию и возможные изменения правил после major-обновления eslint-plugin-unicorn.",
+    "limits": "Изменение относится к проверке исходников. Поскольку одна зависимость получила новую major-версию, возможны изменения lint-результатов; публичный API приложения не меняется автоматически.",
+    "source": "https://github.com/VKCOM/VKUI/commit/3ccbe5b1cc0fdd2a897a3d69c4a1573bbb7944e6",
+    "verified": "19.10.2026",
+    "priority": 7
+  },
+  {
+    "name": "VKUI: обновлены Rspack CLI и Core",
+    "code": "@rspack/cli 2.2.8→2.2.9; @rspack/core 2.2.8→2.2.9",
+    "category": "VKUI / сборка",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "CI"
+    ],
+    "summary": "18.10.2026 @rspack/cli и @rspack/core обновлены с 2.2.8 до 2.2.9.",
+    "details": "Официальный commit обновляет две dev-зависимости сборщика Rspack на patch-релиз.",
+    "use": "При использовании Rspack для разработки VKUI проверить production build и dev-сервер после обновления зависимостей.",
+    "limits": "Не свидетельствует о новом релизе библиотеки VKUI или изменении функций социальной сети.",
+    "source": "https://github.com/VKCOM/VKUI/commit/11426d8e6e3ee279fafde18681eacbe1df00e043",
+    "verified": "19.10.2026",
+    "priority": 8
+  },
+  {
+    "name": "VKUI: обновлены Next.js и Bundle Analyzer",
+    "code": "next 16.4.0→16.4.1; @next/bundle-analyzer 16.4.0→16.4.1",
+    "category": "VKUI / примеры Next.js",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "Next.js examples"
+    ],
+    "summary": "18.10.2026 Next.js и @next/bundle-analyzer обновлены с 16.4.0 до 16.4.1.",
+    "details": "Patch-обновление двух dev-зависимостей примеров/инструментов Next.js в репозитории VKUI.",
+    "use": "При работе с примером VKUI на Next.js пересобрать приложение и проверить анализ bundle.",
+    "limits": "Не означает, что VKUI теперь требует Next.js 16.4.1 во всех проектах; изменение относится к репозиторию разработки.",
+    "source": "https://github.com/VKCOM/VKUI/commit/3a07d969dc36ac5bd75146d6ef6f8cebd8220ddd",
+    "verified": "19.10.2026",
+    "priority": 8
+  },
+  {
+    "name": "VKUI: обновлён Vite",
+    "code": "vite 8.3.3→8.3.4",
+    "category": "VKUI / dev server и сборка",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "CI"
+    ],
+    "summary": "18.10.2026 Vite обновлён с 8.3.3 до 8.3.4.",
+    "details": "Patch-обновление dev-зависимости Vite в репозитории VKUI.",
+    "use": "При локальной разработке и сборке VKUI использовать актуальную зависимость и прогнать build/test.",
+    "limits": "Не является новой возможностью VK Mini Apps; влияние на опубликованные приложения не подтверждено.",
+    "source": "https://github.com/VKCOM/VKUI/commit/41895711b337ca573be1724d33563af0a19e4702",
+    "verified": "19.10.2026",
+    "priority": 8
+  },
+  {
+    "name": "VKUI: обновлён happy-dom",
+    "code": "happy-dom 20.14.5→21.0.1",
+    "category": "VKUI / тестовая DOM-среда",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "CI"
+    ],
+    "summary": "18.10.2026 happy-dom обновлён с 20.14.5 до 21.0.1.",
+    "details": "Зависимость тестовой DOM-среды перешла на новую major-версию.",
+    "use": "После обновления прогнать unit-тесты компонентов, особенно сценарии DOM, событий и браузерных API.",
+    "limits": "Major-обновление может выявить несовместимости тестового окружения. Это не свидетельствует об изменении DOM-поведения в браузере у конечных пользователей.",
+    "source": "https://github.com/VKCOM/VKUI/commit/c686d1191a1a4987d020716bc12e7433e3718d0f",
+    "verified": "19.10.2026",
+    "priority": 7
+  },
+  {
+    "name": "VKUI: обновлены типы Node.js",
+    "code": "@types/node 26.6.4→26.6.5",
+    "category": "VKUI / типизация",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "TypeScript"
+    ],
+    "summary": "18.10.2026 @types/node обновлён с 26.6.4 до 26.6.5.",
+    "details": "Patch-обновление TypeScript-описаний API Node.js в dev-зависимостях VKUI.",
+    "use": "При проверке типов и разработке Node.js-скриптов использовать актуальный lockfile.",
+    "limits": "Обновляются типовые объявления; фактическая версия Node.js в runtime этим коммитом не меняется.",
+    "source": "https://github.com/VKCOM/VKUI/commit/435f958f2d69dc0ba3863f475835222958a9e2b4",
+    "verified": "19.10.2026",
+    "priority": 9
+  },
+  {
+    "name": "VKUI: обновлён cssnano",
+    "code": "cssnano 9.3.2→9.8.0",
+    "category": "VKUI / оптимизация CSS",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "Build"
+    ],
+    "summary": "18.10.2026 cssnano обновлён с 9.3.2 до 9.8.0.",
+    "details": "Обновлена dev-зависимость оптимизации CSS. Это обновление инструмента минификации стилей в процессе сборки.",
+    "use": "После обновления сравнить production CSS и выполнить визуальные smoke-тесты, если проект форкает сборочную конфигурацию VKUI.",
+    "limits": "Не подтверждает изменение исходных CSS-правил или опубликованного пакета VKUI.",
+    "source": "https://github.com/VKCOM/VKUI/commit/c0b42fcdabe67955b1bab68e7ea322c089007973",
+    "verified": "19.10.2026",
+    "priority": 8
+  },
+  {
+    "name": "VKUI: обновлена dev-зависимость @vkontakte/icons",
+    "code": "@vkontakte/icons 3.75.0→3.76.0",
+    "category": "VKUI / зависимости компонентов",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "React"
+    ],
+    "summary": "18.10.2026 в зависимостях VKUI @vkontakte/icons обновлён с 3.75.0 до 3.76.0.",
+    "details": "Коммит обновляет версию пакета иконок, указанную в VKUI. Это отдельное изменение зависимости в репозитории VKUI.",
+    "use": "При сборке исходников VKUI проверить совместимость импортируемых иконок с обновлённой версией зависимости.",
+    "limits": "Это не новый релиз самого VKUI. Версия зависимости в коммите не равна последней версии пакета icons, опубликованной отдельно; не следует делать вывод о текущем npm latest только по этому commit.",
+    "source": "https://github.com/VKCOM/VKUI/commit/01bfc35792896185cadfebebbb4f9d76a7387e4d",
+    "verified": "19.10.2026",
+    "priority": 8
+  },
+  {
+    "name": "VKUI: обновлён Zod",
+    "code": "zod 4.6.5→4.6.7",
+    "category": "VKUI / валидация данных в инструментах разработки",
+    "status": "technical",
+    "platforms": [
+      "Developer tooling",
+      "TypeScript"
+    ],
+    "summary": "18.10.2026 Zod обновлён с 4.6.5 до 4.6.7.",
+    "details": "Patch-обновление зависимости Zod в репозитории VKUI.",
+    "use": "При запуске тестов и инструментов, использующих Zod-схемы, синхронизировать lockfile и повторить тесты валидации.",
+    "limits": "Коммит не подтверждает изменение публичных типов/методов VKUI или VK API.",
+    "source": "https://github.com/VKCOM/VKUI/commit/bae924d13b3bf30ffffa4774f35c66e02f6e578c",
+    "verified": "19.10.2026",
+    "priority": 8
+  },
+  {
+    "name": "VK: информационное сообщение об атаке на ЦОД",
+    "code": "Operational status; data center; service availability",
+    "category": "VK / операционный статус",
+    "status": "verified",
+    "platforms": [
+      "VK services"
+    ],
+    "summary": "18.10.2026 VK сообщила об атаке БПЛА на ЦОД в Ленинградской области и заявила, что сервисы доступны пользователям в обычном режиме.",
+    "details": "Официальная публикация VK от 18 октября — информационное сообщение о происшествии в дата-центре. Компания сообщила, что сервисы VK доступны в обычном режиме.",
+    "use": "Зафиксировать в журнале мониторинга как подтверждённое инфраструктурное событие; для пользовательских инцидентов в этот момент ориентироваться на актуальный статус конкретного сервиса.",
+    "limits": "Публикация не описывает конкретных перебоев или изменений API. Не делать выводов о влиянии на отдельные сервисы сверх официального сообщения.",
+    "source": "https://vk.company.ru/ru/press/releases/12438/",
+    "verified": "19.10.2026",
+    "priority": 5
+  }
+]
